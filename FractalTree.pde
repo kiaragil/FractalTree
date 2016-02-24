@@ -24,7 +24,7 @@ public void drawBranches(int x,int y, double branchLength, double angle){
 	int endY1 = (int)(branchLength * Math.sin(ang1) + y);
 	int endX2 = (int)(branchLength * Math.cos(ang2) + x);
 	int endY2 = (int)(branchLength * Math.sin(ang2) + y);
-	stroke(150,255 - (int)(branchAngle*50),255 -(int)(branchLength*30));   
+	stroke(170,50 + (int)(mouseY/3),100 - (int)(mouseY/3));   
 	line(x, y, endX1, endY1);
 	line(x, y, endX2, endY2);
 
@@ -32,3 +32,4 @@ public void drawBranches(int x,int y, double branchLength, double angle){
 		drawBranches(endX1, endY1, branchLength, ang1);
 		drawBranches(endX2, endY2, branchLength, ang2);
 	}
+}
